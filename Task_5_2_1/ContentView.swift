@@ -8,9 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var email = ""
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack{
+            Text("Email").frame(maxWidth: .infinity, alignment: .leading).padding(.horizontal)
+            TextField("Email", text: $email).textFieldStyle(RoundedBorderTextFieldStyle()).padding(.horizontal)
+            Text("Password").frame(maxWidth: .infinity, alignment: .leading).padding(.horizontal)
+            TextField("Password", text: $email).textFieldStyle(RoundedBorderTextFieldStyle()).padding(.horizontal)
+        }
     }
 }
 
